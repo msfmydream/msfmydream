@@ -22,19 +22,20 @@
     var CONFIG = {"hostname":"msfmydream.gitee.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="可分为三个区： 工作区，暂存区，远程仓库 1.在本地进行初始化，建立暂存区，  .git 文件存储当前项目的所有版本信息 1git init   2.将文件从工作区提交到暂存区 1234git add  文件名git add *  提交所有文件git commit -m &quot;这一次提交的描述&quot;  3.查看当前工作区的状态 1git status">
+  <meta name="description" content="DFS–深度优先搜索例题一： 全排列问题，输入一个数n，输出它的所有排列可能123456789101112131415161718dfs(int u)&amp;#123;    if(u &#x3D;&#x3D; n)    &amp;#123;        for(int i &#x3D; 0; i &lt; n; i++)  printf(&quot;%d &quot;,path[i]);    &amp;#125;        for(in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git够用手册">
-<meta property="og:url" content="http://msfmydream.gitee.io/myblog/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/index.html">
+<meta property="og:title" content="[笔记]执着的DFS">
+<meta property="og:url" content="http://msfmydream.gitee.io/myblog/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/index.html">
 <meta property="og:site_name" content="Azu  Blog">
-<meta property="og:description" content="可分为三个区： 工作区，暂存区，远程仓库 1.在本地进行初始化，建立暂存区，  .git 文件存储当前项目的所有版本信息 1git init   2.将文件从工作区提交到暂存区 1234git add  文件名git add *  提交所有文件git commit -m &quot;这一次提交的描述&quot;  3.查看当前工作区的状态 1git status">
+<meta property="og:description" content="DFS–深度优先搜索例题一： 全排列问题，输入一个数n，输出它的所有排列可能123456789101112131415161718dfs(int u)&amp;#123;    if(u &#x3D;&#x3D; n)    &amp;#123;        for(int i &#x3D; 0; i &lt; n; i++)  printf(&quot;%d &quot;,path[i]);    &amp;#125;        for(in">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-30T05:47:40.000Z">
-<meta property="article:modified_time" content="2021-08-31T03:20:49.198Z">
+<meta property="article:published_time" content="2021-09-01T15:45:40.000Z">
+<meta property="article:modified_time" content="2021-09-01T16:04:24.097Z">
 <meta property="article:author" content="Azu">
+<meta property="article:tag" content="DFS">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://msfmydream.gitee.io/myblog/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">
+<link rel="canonical" href="http://msfmydream.gitee.io/myblog/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/">
 
 
 <script id="page-configurations">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>git够用手册 | Azu  Blog</title>
+  <title>[笔记]执着的DFS | Azu  Blog</title>
   
 
 
@@ -168,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">
+    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/512.gif">
@@ -181,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          git够用手册
+          [笔记]执着的DFS
         </h1>
 
         <div class="post-meta">
@@ -191,14 +192,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-08-30 13:47:40" itemprop="dateCreated datePublished" datetime="2021-08-30T13:47:40+08:00">2021-08-30</time>
+              <time title="创建时间：2021-09-01 23:45:40" itemprop="dateCreated datePublished" datetime="2021-09-01T23:45:40+08:00">2021-09-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-31 11:20:49" itemprop="dateModified" datetime="2021-08-31T11:20:49+08:00">2021-08-31</time>
+                <time title="修改时间：2021-09-02 00:04:24" itemprop="dateModified" datetime="2021-09-02T00:04:24+08:00">2021-09-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,7 +207,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
+                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
                 </span>
             </span>
 
@@ -221,45 +222,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>可分为三个区： 工作区，暂存区，远程仓库</p>
-<p>1.在本地进行初始化，建立暂存区，  .git 文件存储当前项目的所有版本信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+        <h2 id="DFS–深度优先搜索"><a href="#DFS–深度优先搜索" class="headerlink" title="DFS–深度优先搜索"></a>DFS–深度优先搜索</h2><h4 id="例题一：-全排列问题，输入一个数n，输出它的所有排列可能"><a href="#例题一：-全排列问题，输入一个数n，输出它的所有排列可能" class="headerlink" title="例题一： 全排列问题，输入一个数n，输出它的所有排列可能"></a>例题一： 全排列问题，输入一个数n，输出它的所有排列可能</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dfs</span>(<span class="keyword">int</span> u)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(u == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)  <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,path[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>( !used[i] )</span><br><span class="line">        &#123;</span><br><span class="line">            path[u] = i;</span><br><span class="line">            used[i] = <span class="literal">true</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(u + <span class="number">1</span>);</span><br><span class="line">            used[i] = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p> 2.将文件从工作区提交到暂存区</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add  文件名</span><br><span class="line">git add *  提交所有文件</span><br><span class="line"></span><br><span class="line">git commit -m &quot;这一次提交的描述&quot;</span><br></pre></td></tr></table></figure>
-
-<p>3.查看当前工作区的状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>4.从暂存区恢复文件到工作区</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 文件名</span><br></pre></td></tr></table></figure>
-
-<p>5.查看工作区和暂存区版本的区别</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
-
-<p>6.查看提交过的历史版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
-
-<p>7.恢复文件到指定的版本</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 版本号   恢复到指定版本</span><br></pre></td></tr></table></figure>
-
-<p>8.若要从本地提交到远程仓库，需要先生成ssh密匙</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的github邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>从本地生成密匙后，到  我的电脑=&gt; 用户 =&gt;用户文件夹 =&gt; .ssh（隐藏文件） =&gt; id_rsa.pub（存有密匙）</p>
-<p>拿到这个文件中的密匙后，进入github登录用户，进入 setting 管理密匙中添加该密匙</p>
-<p>9.指定本地暂存区提交的远程仓库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">暂存区 =&gt; 远程仓库</span><br><span class="line">git remote add origin &quot;仓库地址&quot;</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<p>10.从远程仓库克隆代码到本地</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 仓库地址</span><br></pre></td></tr></table></figure>
-
-<p>11.从远程仓库同步代码到本地</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h4 id="例题二：n-皇后问题"><a href="#例题二：n-皇后问题" class="headerlink" title="例题二：n-皇后问题"></a>例题二：n-皇后问题</h4><p>n−皇后问题是指将 n个皇后放在 n×n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上。</p>
+<p>现在给定整数 n，请你输出所有的满足条件的棋子摆法。</p>
+<p>代码分析</p>
+<blockquote>
+<p>对角线 dg[u+i]，反对角线udg[n−u+i]中的下标 u+ i 和 n−u+ i 表示的是截距</p>
+</blockquote>
+<blockquote>
+<p>对于反对角线 y=x+b, 截距 b=y−x，因为我们要把 b当做数组下标来用，显然 b 不能是负的，所以我们加上 +n，来保证是结果是正的，即 y - x + n<br>而对角线 y=−x+b, 截距是 b=y+x，这里截距一定是正的，所以不需要加偏移量</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dfs</span>(<span class="keyword">int</span> u)  <span class="comment">//u 为行号，此处dfs按行进行枚举</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(u == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!col[i] &amp;&amp; !dg[u + i] &amp;&amp; !udg[n - u + i] )</span><br><span class="line">        &#123;</span><br><span class="line">            path[g][i] = <span class="string">&#x27;Q&#x27;</span>;</span><br><span class="line">            col[i] = dg[u + i] = udg[n - u + i] = <span class="literal">true</span>;</span><br><span class="line">           	<span class="built_in">dfs</span>(u+<span class="number">1</span>); <span class="comment">//递归到下一行</span></span><br><span class="line">            col[i] = dg[u + i] = udg[n - u + i] = <span class="literal">false</span>;</span><br><span class="line">            g[u][i] = <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -271,17 +245,20 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/DFS/" rel="tag"># DFS</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/" rel="next" title="[笔记]执着的DFS">
-      [笔记]执着的DFS <i class="fa fa-chevron-right"></i>
+    <a href="/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" rel="prev" title="git够用手册">
+      <i class="fa fa-chevron-left"></i> git够用手册
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -340,6 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS%E2%80%93%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-number">1.</span> <span class="nav-text">DFS–深度优先搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98%E4%B8%80%EF%BC%9A-%E5%85%A8%E6%8E%92%E5%88%97%E9%97%AE%E9%A2%98%EF%BC%8C%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%95%B0n%EF%BC%8C%E8%BE%93%E5%87%BA%E5%AE%83%E7%9A%84%E6%89%80%E6%9C%89%E6%8E%92%E5%88%97%E5%8F%AF%E8%83%BD"><span class="nav-number">1.0.1.</span> <span class="nav-text">例题一： 全排列问题，输入一个数n，输出它的所有排列可能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98%E4%BA%8C%EF%BC%9An-%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98"><span class="nav-number">1.0.2.</span> <span class="nav-text">例题二：n-皇后问题</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
