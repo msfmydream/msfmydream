@@ -22,28 +22,34 @@
     var CONFIG = {"hostname":"msfmydream.gitee.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Azu  Blog">
-<meta property="og:url" content="http://msfmydream.gitee.io/myblog/index.html">
+  <meta name="description" content="朴素的Prim算法给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环，边权可能为负数。 求最小生成树的树边权重之和，如果最小生成树不存在则输出 impossible。 给定一张边带权的无向图 G&#x3D;(V,E)其中 V 表示图中点的集合，EE 表示图中边的集合，n&#x3D;|V|，m&#x3D;|E|。 由 VV 中的全部 n 个顶点和 EE 中 n−1 条边构成的无向连通子图被称为 G 的一棵生成树，其中边">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[笔记]最小生成树">
+<meta property="og:url" content="http://msfmydream.gitee.io/myblog/2021/09/13/[%E7%AC%94%E8%AE%B0]%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Azu  Blog">
+<meta property="og:description" content="朴素的Prim算法给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环，边权可能为负数。 求最小生成树的树边权重之和，如果最小生成树不存在则输出 impossible。 给定一张边带权的无向图 G&#x3D;(V,E)其中 V 表示图中点的集合，EE 表示图中边的集合，n&#x3D;|V|，m&#x3D;|E|。 由 VV 中的全部 n 个顶点和 EE 中 n−1 条边构成的无向连通子图被称为 G 的一棵生成树，其中边">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-13T05:10:21.708Z">
+<meta property="article:modified_time" content="2021-09-13T05:16:16.346Z">
 <meta property="article:author" content="Azu">
+<meta property="article:tag" content="最小生成树">
+<meta property="article:tag" content="Prim算法">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://msfmydream.gitee.io/myblog/">
+<link rel="canonical" href="http://msfmydream.gitee.io/myblog/2021/09/13/[%E7%AC%94%E8%AE%B0]%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%AE%97%E6%B3%95/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Azu  Blog</title>
+  <title>[笔记]最小生成树 | Azu  Blog</title>
   
 
 
@@ -157,9 +163,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -175,10 +182,9 @@
       <meta itemprop="name" content="Azu  Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/13/%5B%E7%AC%94%E8%AE%B0%5D%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">[笔记]最小生成树</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          [笔记]最小生成树
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -211,7 +217,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="朴素的Prim算法"><a href="#朴素的Prim算法" class="headerlink" title="朴素的Prim算法"></a>朴素的Prim算法</h3><p>给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环，边权可能为负数。</p>
+        <h3 id="朴素的Prim算法"><a href="#朴素的Prim算法" class="headerlink" title="朴素的Prim算法"></a>朴素的Prim算法</h3><p>给定一个 n 个点 m 条边的无向图，图中可能存在重边和自环，边权可能为负数。</p>
 <p>求最小生成树的树边权重之和，如果最小生成树不存在则输出 <code>impossible</code>。</p>
 <p>给定一张边带权的无向图 G=(V,E)其中 V 表示图中点的集合，EE 表示图中边的集合，n=|V|，m=|E|。</p>
 <p>由 VV 中的全部 n 个顶点和 EE 中 n−1 条边构成的无向连通子图被称为 G 的一棵生成树，其中边的权值之和最小的生成树被称为无向图 G 的最小生成树。</p>
@@ -253,370 +259,35 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span> + <span class="number">5000</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span>  p[N];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a,b,w;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt; (<span class="keyword">const</span> Edge &amp;W)<span class="keyword">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> w &lt; W.w;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;edges[N];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(p[x] != x) p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">    <span class="keyword">return</span> p[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n&gt;&gt;m;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a,b,w;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;w);</span><br><span class="line">        edges[i] = &#123;a,b,w&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">sort</span>(edges ,edges + m );</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) p[i] = i;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span> , cnt = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a= edges[i].a , b = edges[i].b , w = edges[i].w;</span><br><span class="line">        </span><br><span class="line">        a = <span class="built_in">find</span>(a) , b = <span class="built_in">find</span>(b);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(a != b)</span><br><span class="line">        &#123;</span><br><span class="line">            p[a] = b;</span><br><span class="line">            res += w;</span><br><span class="line">            cnt++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(cnt &lt; n - <span class="number">1</span>) <span class="built_in">puts</span>(<span class="string">&quot;impossible&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span> cout &lt;&lt; res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" rel="tag"># 最小生成树</a>
+              <a href="/tags/Prim%E7%AE%97%E6%B3%95/" rel="tag"># Prim算法</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F---%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F---%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">设计模式---策略模式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-11 17:50:54 / 修改时间：21:46:08" itemprop="dateCreated datePublished" datetime="2021-09-11T17:50:54+08:00">2021-09-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">Java设计模式</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="设计模式—策略模式"><a href="#设计模式—策略模式" class="headerlink" title="设计模式—策略模式"></a>设计模式—策略模式</h3><blockquote>
-<p>销售类Sale<br>​                销售项SaleItem: 商品名、价格、数量<br>​计算商品价格有多种算法，<br>​                    1.平时不打折<br>​                    2.优惠活动时：满200减50<br>​                    3.打九折…等等</p>
-</blockquote>
-<p>要求使用的各种计价算法可以轻松的互换，所以将计价这个行为抽象出来作为一个<code>接口</code>，再创建不同的实现类实现该接口，实现不同的计价规则。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F---%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/09/[%E7%AC%94%E8%AE%B0]%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/09/%5B%E7%AC%94%E8%AE%B0%5D%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">[笔记]图中求最短路的方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-09 17:51:51" itemprop="dateCreated datePublished" datetime="2021-09-09T17:51:51+08:00">2021-09-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-11 10:35:01" itemprop="dateModified" datetime="2021-09-11T10:35:01+08:00">2021-09-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Dijkstra求最短路"><a href="#Dijkstra求最短路" class="headerlink" title="Dijkstra求最短路"></a>Dijkstra求最短路</h3><p>给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环，所有边权均为正值。</p>
-<p>请你求出 11 号点到 n 号点的最短距离，如果无法从 1 号点走到 n 号点，则输出 −1。</p>
-<p> 输入格式</p>
-<p>第一行包含整数 n 和 m。</p>
-<p>接下来 mm 行每行包含三个整数 x,y,z表示存在一条从点 x 到点 y 的有向边，边长为 z。</p>
-<p>  <strong>输出格式</strong></p>
-<p>输出一个整数，表示 11 号点到 n 号点的最短距离。</p>
-<p>如果路径不存在，则输出 −1。</p>
-<p> <strong>数据范围</strong></p>
-<p>1≤n≤500<br>1≤m≤105<br>图中涉及边长均不超过10000。</p>
-<p>  <strong>输入样例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 3</span><br><span class="line">1 2 2</span><br><span class="line">2 3 1</span><br><span class="line">1 3 4</span><br></pre></td></tr></table></figure>
-
-<p>  <strong>输出样例</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/09/%5B%E7%AC%94%E8%AE%B0%5D%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F---%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" rel="prev" title="设计模式---策略模式">
+      <i class="fa fa-chevron-left"></i> 设计模式---策略模式
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/" class="post-title-link" itemprop="url">c++中优先队列(priority_queue)的用法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-09 11:47:27 / 修改时间：16:15:47" itemprop="dateCreated datePublished" datetime="2021-09-09T11:47:27+08:00">2021-09-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">语法基础</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="优先队列定义"><a href="#优先队列定义" class="headerlink" title="优先队列定义"></a>优先队列定义</h1><p><strong>定义</strong>：priority_queue&lt;Type, Container Functional&gt;</p>
-<blockquote>
-<p>Type 表示队列中的数据类型</p>
-<p>Container 表示容器的类型，例如vector，queue 等</p>
-<p>Functional 表示比较的方式， 默认是大根堆</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" class="post-title-link" itemprop="url">[笔记]树与图的遍历</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-07 22:26:27" itemprop="dateCreated datePublished" datetime="2021-09-07T22:26:27+08:00">2021-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-08 21:30:37" itemprop="dateModified" datetime="2021-09-08T21:30:37+08:00">2021-09-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="树与图的遍历"><a href="#树与图的遍历" class="headerlink" title="树与图的遍历"></a>树与图的遍历</h3><h5 id="例1：树的重心"><a href="#例1：树的重心" class="headerlink" title="例1：树的重心"></a>例1：树的重心</h5><blockquote>
-<p>给定一颗树，树中包含 n 个结点（编号1∼n）和 n−1 条无向边。</p>
-<p>请你找到树的重心，并输出将重心删除后，剩余各个连通块中点数的最大值。</p>
-<p>重心定义：重心是指树中的一个结点，如果将这个点删除后，剩余各个连通块中点数的最大值最小，那么这个节点被称为树的重心。</p>
-<p>  <strong>输入格式</strong></p>
-<p>第一行包含整数 n，表示树的结点数。</p>
-<p>接下来 n−1 行，每行包含两个整数 a 和 b，表示点 a 和点 b 之间存在一条边。</p>
-<p>  <strong>输出格式</strong></p>
-<p>输出一个整数 m，表示将重心删除后，剩余各个连通块中点数的最大值。</p>
-<p>  <strong>数据范围</strong></p>
-<p>1≤n≤105</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -668,6 +339,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%B4%E7%B4%A0%E7%9A%84Prim%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">朴素的Prim算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kruskal%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Kruskal算法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
