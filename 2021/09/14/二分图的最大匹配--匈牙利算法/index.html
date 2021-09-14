@@ -22,20 +22,21 @@
     var CONFIG = {"hostname":"msfmydream.gitee.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="DFS–深度优先搜索例题一： 全排列问题，输入一个数n，输出它的所有排列可能123456789101112131415161718dfs(int u)&amp;#123;    if(u &#x3D;&#x3D; n)    &amp;#123;        for(int i &#x3D; 0; i &lt; n; i++)  printf(&quot;%d &quot;,path[i]);    &amp;#125;        for(in">
+  <meta name="description" content="二分图的最大匹配–匈牙利算法 二分图的匹配：给定一个二分图 G，在 G 的一个子图 M 中，M 的边集 {E} 中的任意两条边都不依附于同一个顶点，则称 M 是一个匹配。 二分图的最大匹配：所有匹配中包含边数最多的一组匹配被称为二分图的最大匹配，其边数即为最大匹配数。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[笔记]执着的DFS">
-<meta property="og:url" content="http://msfmydream.gitee.io/myblog/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/index.html">
+<meta property="og:title" content="[笔记]二分图的最大匹配--匈牙利算法">
+<meta property="og:url" content="http://msfmydream.gitee.io/myblog/2021/09/14/%E4%BA%8C%E5%88%86%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D--%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Azu  Blog">
-<meta property="og:description" content="DFS–深度优先搜索例题一： 全排列问题，输入一个数n，输出它的所有排列可能123456789101112131415161718dfs(int u)&amp;#123;    if(u &#x3D;&#x3D; n)    &amp;#123;        for(int i &#x3D; 0; i &lt; n; i++)  printf(&quot;%d &quot;,path[i]);    &amp;#125;        for(in">
+<meta property="og:description" content="二分图的最大匹配–匈牙利算法 二分图的匹配：给定一个二分图 G，在 G 的一个子图 M 中，M 的边集 {E} 中的任意两条边都不依附于同一个顶点，则称 M 是一个匹配。 二分图的最大匹配：所有匹配中包含边数最多的一组匹配被称为二分图的最大匹配，其边数即为最大匹配数。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-01T15:45:40.000Z">
-<meta property="article:modified_time" content="2021-09-04T14:22:37.492Z">
+<meta property="article:published_time" content="2021-09-14T12:34:05.638Z">
+<meta property="article:modified_time" content="2021-09-14T12:35:12.508Z">
 <meta property="article:author" content="Azu">
-<meta property="article:tag" content="DFS">
+<meta property="article:tag" content="二分图">
+<meta property="article:tag" content="匈牙利算法">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://msfmydream.gitee.io/myblog/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/">
+<link rel="canonical" href="http://msfmydream.gitee.io/myblog/2021/09/14/%E4%BA%8C%E5%88%86%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D--%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -48,7 +49,7 @@
   };
 </script>
 
-  <title>[笔记]执着的DFS | Azu  Blog</title>
+  <title>[笔记]二分图的最大匹配--匈牙利算法 | Azu  Blog</title>
   
 
 
@@ -169,7 +170,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/">
+    <link itemprop="mainEntityOfPage" href="http://msfmydream.gitee.io/myblog/2021/09/14/%E4%BA%8C%E5%88%86%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D--%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/512.gif">
@@ -182,7 +183,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [笔记]执着的DFS
+          [笔记]二分图的最大匹配--匈牙利算法
         </h1>
 
         <div class="post-meta">
@@ -191,16 +192,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-09-01 23:45:40" itemprop="dateCreated datePublished" datetime="2021-09-01T23:45:40+08:00">2021-09-01</time>
+              <time title="创建时间：2021-09-14 20:34:05 / 修改时间：20:35:12" itemprop="dateCreated datePublished" datetime="2021-09-14T20:34:05+08:00">2021-09-14</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-04 22:22:37" itemprop="dateModified" datetime="2021-09-04T22:22:37+08:00">2021-09-04</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -222,22 +217,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="DFS–深度优先搜索"><a href="#DFS–深度优先搜索" class="headerlink" title="DFS–深度优先搜索"></a>DFS–深度优先搜索</h2><h4 id="例题一：-全排列问题，输入一个数n，输出它的所有排列可能"><a href="#例题一：-全排列问题，输入一个数n，输出它的所有排列可能" class="headerlink" title="例题一： 全排列问题，输入一个数n，输出它的所有排列可能"></a>例题一： 全排列问题，输入一个数n，输出它的所有排列可能</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dfs</span>(<span class="keyword">int</span> u)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(u == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)  <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,path[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>( !used[i] )</span><br><span class="line">        &#123;</span><br><span class="line">            path[u] = i;</span><br><span class="line">            used[i] = <span class="literal">true</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(u + <span class="number">1</span>);</span><br><span class="line">            used[i] = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h3 id="二分图的最大匹配–匈牙利算法"><a href="#二分图的最大匹配–匈牙利算法" class="headerlink" title="二分图的最大匹配–匈牙利算法"></a>二分图的最大匹配–匈牙利算法</h3><blockquote>
+<p>二分图的匹配：给定一个二分图 G，在 G 的一个子图 M 中，M 的边集 {E} 中的任意两条边都不依附于同一个顶点，则称 M 是一个匹配。</p>
+<p>二分图的最大匹配：所有匹配中包含边数最多的一组匹配被称为二分图的最大匹配，其边数即为最大匹配数。</p>
+</blockquote>
 <span id="more"></span>
 
-<h4 id="例题二：n-皇后问题"><a href="#例题二：n-皇后问题" class="headerlink" title="例题二：n-皇后问题"></a>例题二：n-皇后问题</h4><p>n−皇后问题是指将 n个皇后放在 n×n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上。</p>
-<p>现在给定整数 n，请你输出所有的满足条件的棋子摆法。</p>
-<p>代码分析</p>
-<blockquote>
-<p>对角线 dg[u+i]，反对角线udg[n−u+i]中的下标 u+ i 和 n−u+ i 表示的是截距</p>
-</blockquote>
-<blockquote>
-<p>对于反对角线 y=x+b, 截距 b=y−x，因为我们要把 b当做数组下标来用，显然 b 不能是负的，所以我们加上 +n，来保证是结果是正的，即 y - x + n<br>而对角线 y=−x+b, 截距是 b=y+x，这里截距一定是正的，所以不需要加偏移量</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dfs</span>(<span class="keyword">int</span> u)  <span class="comment">//u 为行号，此处dfs按行进行枚举</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(u == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,g[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!col[i] &amp;&amp; !dg[u + i] &amp;&amp; !udg[n - u + i] )</span><br><span class="line">        &#123;</span><br><span class="line">            path[g][i] = <span class="string">&#x27;Q&#x27;</span>;</span><br><span class="line">            col[i] = dg[u + i] = udg[n - u + i] = <span class="literal">true</span>;</span><br><span class="line">           	<span class="built_in">dfs</span>(u+<span class="number">1</span>); <span class="comment">//递归到下一行</span></span><br><span class="line">            col[i] = dg[u + i] = udg[n - u + i] = <span class="literal">false</span>;  <span class="comment">//恢复状态</span></span><br><span class="line">            g[u][i] = <span class="string">&#x27;.&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<p>算法思路：</p>
+<p>枚举二分图中一半的点，看这个点是否能与二分图另一半的点中的一个点唯一相连，</p>
+<p>如果可以则为一个匹配，如果右半的点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1e5</span> + <span class="number">10</span> , M = <span class="number">2</span>*N;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> h[N],e[M],ne[M],idx;</span><br><span class="line"><span class="keyword">int</span> match[M];</span><br><span class="line"><span class="keyword">bool</span> st[M];</span><br><span class="line"><span class="keyword">int</span> n1,n2,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = b, ne[idx] = h[a], h[a] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = h[x] ; i != <span class="number">-1</span> ; i= ne[i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j = e[i];</span><br><span class="line">        <span class="keyword">if</span>(!st[j])</span><br><span class="line">        &#123;</span><br><span class="line">            st[j] = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(match[j] == <span class="number">0</span> || <span class="built_in">find</span>(match[j]))</span><br><span class="line">            &#123;</span><br><span class="line">                match[j] = x;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(h,<span class="number">-1</span>,<span class="keyword">sizeof</span> h);</span><br><span class="line">	cin&gt;&gt;n1&gt;&gt;n2&gt;&gt;m;</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> a,b;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">        <span class="built_in">add</span>(a,b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n1 ; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(st,<span class="literal">false</span>,<span class="keyword">sizeof</span> st); <span class="comment">//每次记得将st数组清空</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">find</span>(i)) res++;</span><br><span class="line">    &#125;</span><br><span class="line">  	</span><br><span class="line">    cout&lt;&lt;res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -248,7 +237,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/DFS/" rel="tag"># DFS</a>
+              <a href="/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" rel="tag"># 二分图</a>
+              <a href="/tags/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" rel="tag"># 匈牙利算法</a>
           </div>
 
         
@@ -257,13 +247,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" rel="prev" title="git够用手册">
-      <i class="fa fa-chevron-left"></i> git够用手册
+    <a href="/2021/09/14/%E6%9F%93%E8%89%B2%E6%B3%95%E5%88%A4%E5%AE%9A%E4%BA%8C%E5%88%86%E5%9B%BE/" rel="prev" title="[笔记]染色法判定二分图">
+      <i class="fa fa-chevron-left"></i> [笔记]染色法判定二分图
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" rel="next" title="[笔记]树与图的遍历">
-      [笔记]树与图的遍历 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -322,7 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS%E2%80%93%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2"><span class="nav-number">1.</span> <span class="nav-text">DFS–深度优先搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98%E4%B8%80%EF%BC%9A-%E5%85%A8%E6%8E%92%E5%88%97%E9%97%AE%E9%A2%98%EF%BC%8C%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%95%B0n%EF%BC%8C%E8%BE%93%E5%87%BA%E5%AE%83%E7%9A%84%E6%89%80%E6%9C%89%E6%8E%92%E5%88%97%E5%8F%AF%E8%83%BD"><span class="nav-number">1.0.1.</span> <span class="nav-text">例题一： 全排列问题，输入一个数n，输出它的所有排列可能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98%E4%BA%8C%EF%BC%9An-%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98"><span class="nav-number">1.0.2.</span> <span class="nav-text">例题二：n-皇后问题</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E2%80%93%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">二分图的最大匹配–匈牙利算法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
