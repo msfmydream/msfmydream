@@ -22,17 +22,30 @@
     var CONFIG = {"hostname":"mraym.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="K-ON">
+  <meta name="description" content="前置文件分配方式–连续分配 ​    连续分配方式要求每个文件在磁盘上占有一组连续的块 ​    缺点：①不方便文件的拓展，因为要求文件占有连续的块②物理上采用连续分配，存储空间利用率低，会产生难以利用的磁盘碎片。 ​    优点：连续分配支持顺序访问和随机访问 ​    （逻辑块号，块内地址）——&gt;（物理块号，块内地址） 只需要转换块号就行，块内地址保持不变  文件分配方式–链接分配 链接">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Azu  Blog">
-<meta property="og:url" content="https://mraym.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/index.html">
+<meta property="og:url" content="https://mraym.com/%E8%8D%89%E7%A8%BF/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E4%B8%89--%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86.html">
 <meta property="og:site_name" content="Azu  Blog">
-<meta property="og:description" content="K-ON">
+<meta property="og:description" content="前置文件分配方式–连续分配 ​    连续分配方式要求每个文件在磁盘上占有一组连续的块 ​    缺点：①不方便文件的拓展，因为要求文件占有连续的块②物理上采用连续分配，存储空间利用率低，会产生难以利用的磁盘碎片。 ​    优点：连续分配支持顺序访问和随机访问 ​    （逻辑块号，块内地址）——&gt;（物理块号，块内地址） 只需要转换块号就行，块内地址保持不变  文件分配方式–链接分配 链接">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219115246309.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219120421885.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219120850308.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219121037485.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219142239117.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219143531469.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219151218900.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219152001657.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219152013794.png">
+<meta property="og:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219212523181.png">
+<meta property="article:published_time" content="2021-12-19T13:25:35.224Z">
+<meta property="article:modified_time" content="2021-12-19T13:25:35.224Z">
 <meta property="article:author" content="Azu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/msfmydream/picture/raw/master/image-20211219115246309.png">
 
-<link rel="canonical" href="https://mraym.com/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/">
+<link rel="canonical" href="https://mraym.com/%E8%8D%89%E7%A8%BF/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E4%B8%89--%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">
 
 
 <script id="page-configurations">
@@ -45,7 +58,8 @@
   };
 </script>
 
-  <title>标签: 二分图 | Azu  Blog</title>
+  <title> | Azu  Blog
+</title>
   
 
 
@@ -158,54 +172,79 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content tag">
+          <div class="content page posts-expand">
             
 
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">二分图
-          <small>标签</small>
-        </h2>
-      </div>
+
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
+      
+      
+      <div class="post-body">
+          <h1 id="前置"><a href="#前置" class="headerlink" title="前置"></a>前置</h1><p>文件分配方式–连续分配</p>
+<p>​    <strong>连续分配</strong>方式要求<strong>每个文件在磁盘上占有一组连续的块</strong></p>
+<p>​    缺点：①不方便文件的拓展，因为要求文件占有连续的块②物理上采用连续分配，存储空间利用率低，会产生难以利用的磁盘碎片。</p>
+<p>​    优点：连续分配支持顺序访问和随机访问</p>
+<p>​    （逻辑块号，块内地址）——&gt;（物理块号，块内地址） 只需要转换块号就行，块内地址保持不变</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219115246309.png" alt="image-20211219115246309"></p>
+<p>文件分配方式–链接分配</p>
+<p>链接分配采取离散分配的方式，可以为文件分配离散的磁盘块，分为隐式链接和显示链接两种。</p>
+<p>​    优点： 方便文件的拓展，不会产生碎片问题，提高磁盘的利用率</p>
+<p>​    缺点： 不支持随机访问</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219120421885.png" alt="image-20211219120421885"></p>
+<p>文件分配方式–显示链接</p>
+<p>把链接文件的各物理块的指针显式的存放在一张表中，既文件分配表（FAT）。一个磁盘只会建立一张文件分配表，开机时文件分配表放入内存，并常驻内存。</p>
+<p>​    优点： 方便文件拓展，不会有碎片问题，外存的利用率高，并且支持随机访问，相比于隐式链接，地址转换时不需要访问磁盘，因此文件的访问效率更高。</p>
+<p>​    缺点：文件分配表的需要占用一定的存储空间。</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219120850308.png" alt="image-20211219120850308"></p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219121037485.png" alt="image-20211219121037485"></p>
+<p>存储空间管理–空闲表法</p>
+<p>主要适用于–文件分配方式采用–连续分配方式时</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219142239117.png" alt="image-20211219142239117"></p>
+<p>存储空间管理–空闲链表法</p>
+<p>​    空闲盘块链： 以盘块为单位组成一条空闲链</p>
+<p>​    空闲盘区链： 以盘区为单位组成一条空闲链</p>
+<p>盘区（两个及以上的空闲盘块可以构成一个盘区）</p>
+<p>存储空间管理–位示图法</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219143531469.png" alt="image-20211219143531469"></p>
+<p>如何分配： 若文件需要k个块，①顺序扫描位示图，找到k个相邻或不相邻的 “0”(既空闲的块)；②根据字号、位号算出对应的盘块号，将相应的盘块分配给文件；③将相应位设置为 “1”(既表示块已分配)</p>
+<p>存储空间管理–成组链接法</p>
+<p>………..</p>
+<p>文件系统实现的总结</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219151218900.png" alt="image-20211219151218900"></p>
+<p>操作系统实验三–文件系统</p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219152001657.png" alt="image-20211219152001657"></p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219152013794.png" alt="image-20211219152013794"></p>
+<p><img src="https://gitee.com/msfmydream/picture/raw/master/image-20211219212523181.png" alt="image-20211219212523181"></p>
+<p>文件分配方式采用显示链接，存储空间采用位示图进行管理</p>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-14T20:34:05+08:00"
-              content="2021-09-14">
-          09-14
-        </time>
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/14/%E4%BA%8C%E5%88%86%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D--%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" itemprop="url">
-            <span itemprop="name">[笔记]二分图的最大匹配--匈牙利算法</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+      
+      
+      
     </div>
-  </div>
-  
-  
-  
+    
 
-  
-
+    
+    
+    
 
 
           </div>
@@ -256,6 +295,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">前置</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
