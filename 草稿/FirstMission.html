@@ -29,8 +29,8 @@
 <meta property="og:site_name" content="Azu  Blog">
 <meta property="og:description" content="First Mission Target：  熟悉数据从数据库流向前端的整个过程及对应的操作 在服务器上搭建生产环境    Content of the Mission：  每个人使用spring boot搭建一个后端服务，其中要使用到swagger框架、mybatis&#x2F;mybatis Plus框架，其中代码框架为三层架构：controller-service-mapper及实体模型entry组成">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-01-10T08:17:27.452Z">
-<meta property="article:modified_time" content="2022-01-10T07:33:04.656Z">
+<meta property="article:published_time" content="2022-01-11T15:29:02.345Z">
+<meta property="article:modified_time" content="2022-01-11T15:29:02.345Z">
 <meta property="article:author" content="Azu">
 <meta name="twitter:card" content="summary">
 
@@ -205,6 +205,7 @@
 <p>​    </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//阿里的JSON处理相关依赖</span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.20<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//Swagger  自动生成Api文档相关依赖</span><br><span class="line"> <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mapper</span> <span class="comment">//告诉springboot 这是一个mybatis的mapper类</span></span><br><span class="line"><span class="meta">@Repository</span>  <span class="comment">//将这个mapper 交由spring容器管理</span></span><br><span class="line"><span class="meta">@Service</span> <span class="comment">//标注业务层</span></span><br></pre></td></tr></table></figure>
 
       </div>
       
@@ -275,14 +276,14 @@
     <img class="site-author-image" itemprop="image" alt="Azu"
       src="/images/512.gif">
   <p class="site-author-name" itemprop="name">Azu</p>
-  <div class="site-description" itemprop="description">K-ON</div>
+  <div class="site-description" itemprop="description">轻音厨</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
