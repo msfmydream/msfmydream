@@ -1,769 +1,256 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/msfmydream/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/msfmydream/images/azu32.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/msfmydream/images/azu16.ico">
-  <link rel="mask-icon" href="/msfmydream/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/msfmydream/css/main.css">
-
-
-<link rel="stylesheet" href="/msfmydream/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/msfmydream/lib/pace/pace-theme-minimal.min.css">
-  <script src="/msfmydream/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"github.com","root":"/msfmydream/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="轻音厨">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Azu  Blog - 轻音永不毕业！！</title><meta name="author" content="Azu"><meta name="copyright" content="Azu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="菜菜历险记">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Azu  Blog">
 <meta property="og:url" content="https://github.com/msfmydream/page/2/index.html">
 <meta property="og:site_name" content="Azu  Blog">
-<meta property="og:description" content="轻音厨">
+<meta property="og:description" content="菜菜历险记">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/yongtai.jpg">
 <meta property="article:author" content="Azu">
+<meta property="article:tag" content="头发的离去，是风的追求？还是头皮的不挽留？">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://github.com/msfmydream/page/2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>Azu  Blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/yongtai.jpg"><link rel="shortcut icon" href="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/favicon.jpg"><link rel="canonical" href="https://github.com/msfmydream/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/msfmydream/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/msfmydream/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Azu  Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-11-02 13:20:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/msfmydream/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Azu  Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-      <p class="site-subtitle" itemprop="description">轻音永不毕业！！</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/msfmydream/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/msfmydream/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/msfmydream/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/msfmydream/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/msfmydream/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/msfmydream/2021/09/09/[%E7%AC%94%E8%AE%B0]%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/msfmydream/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="轻音厨">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/msfmydream/2021/09/09/%5B%E7%AC%94%E8%AE%B0%5D%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">[笔记]图中求最短路的方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-09 17:51:51" itemprop="dateCreated datePublished" datetime="2021-09-09T17:51:51+08:00">2021-09-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 10:23:07" itemprop="dateModified" datetime="2022-03-28T10:23:07+08:00">2022-03-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>求最短路：</p>
-<p>​    ①Dijkstra算法</p>
-<p>​    ②Dijkstra算法的堆优化版本</p>
-<p>​    ③spfa求最短路</p>
-<p>​    ④spfa判断图中是否存在负环</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/msfmydream/2021/09/09/%5B%E7%AC%94%E8%AE%B0%5D%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/msfmydream/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/msfmydream/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="轻音厨">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/msfmydream/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/" class="post-title-link" itemprop="url">c++中优先队列(priority_queue)的用法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-09 11:47:27 / 修改时间：16:15:47" itemprop="dateCreated datePublished" datetime="2021-09-09T11:47:27+08:00">2021-09-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/msfmydream/categories/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">语法基础</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="优先队列定义"><a href="#优先队列定义" class="headerlink" title="优先队列定义"></a>优先队列定义</h1><p><strong>定义</strong>：priority_queue&lt;Type, Container Functional&gt;</p>
-<blockquote>
-<p>Type 表示队列中的数据类型</p>
-<p>Container 表示容器的类型，例如vector，queue 等</p>
-<p>Functional 表示比较的方式， 默认是大根堆</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/msfmydream/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/msfmydream/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/msfmydream/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="轻音厨">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/msfmydream/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" class="post-title-link" itemprop="url">[笔记]树与图的遍历</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-07 22:26:27" itemprop="dateCreated datePublished" datetime="2021-09-07T22:26:27+08:00">2021-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 10:21:11" itemprop="dateModified" datetime="2022-03-28T10:21:11+08:00">2022-03-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="树与图的遍历"><a href="#树与图的遍历" class="headerlink" title="树与图的遍历"></a>树与图的遍历</h3><h5 id="例1：树的重心"><a href="#例1：树的重心" class="headerlink" title="例1：树的重心"></a>例1：树的重心</h5><blockquote>
-<p>给定一颗树，树中包含 n 个结点（编号1∼n）和 n−1 条无向边。</p>
-<p>请你找到树的重心，并输出将重心删除后，剩余各个连通块中点数的最大值。</p>
-<p>重心定义：重心是指树中的一个结点，如果将这个点删除后，剩余各个连通块中点数的最大值最小，那么这个节点被称为树的重心。</p>
-<p>  <strong>输入格式</strong></p>
-<p>第一行包含整数 n，表示树的结点数。</p>
-<p>接下来 n−1 行，每行包含两个整数 a 和 b，表示点 a 和点 b 之间存在一条边。</p>
-<p>  <strong>输出格式</strong></p>
-<p>输出一个整数 m，表示将重心删除后，剩余各个连通块中点数的最大值。</p>
-<p>  <strong>数据范围</strong></p>
-<p>1≤n≤105</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/msfmydream/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/msfmydream/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/msfmydream/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="轻音厨">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/msfmydream/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/" class="post-title-link" itemprop="url">[笔记]执着的DFS</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-01 23:45:40" itemprop="dateCreated datePublished" datetime="2021-09-01T23:45:40+08:00">2021-09-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-04 22:22:37" itemprop="dateModified" datetime="2021-09-04T22:22:37+08:00">2021-09-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">算法笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="DFS–深度优先搜索"><a href="#DFS–深度优先搜索" class="headerlink" title="DFS–深度优先搜索"></a>DFS–深度优先搜索</h2><h4 id="例题一：-全排列问题，输入一个数n，输出它的所有排列可能"><a href="#例题一：-全排列问题，输入一个数n，输出它的所有排列可能" class="headerlink" title="例题一： 全排列问题，输入一个数n，输出它的所有排列可能"></a>例题一： 全排列问题，输入一个数n，输出它的所有排列可能</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dfs</span>(<span class="keyword">int</span> u)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(u == n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)  <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,path[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>( !used[i] )</span><br><span class="line">        &#123;</span><br><span class="line">            path[u] = i;</span><br><span class="line">            used[i] = <span class="literal">true</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(u + <span class="number">1</span>);</span><br><span class="line">            used[i] = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/msfmydream/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/msfmydream/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/msfmydream/images/512.gif">
-      <meta itemprop="name" content="Azu">
-      <meta itemprop="description" content="轻音厨">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Azu  Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/msfmydream/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">git够用手册</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 13:47:40" itemprop="dateCreated datePublished" datetime="2021-08-30T13:47:40+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-31 11:20:49" itemprop="dateModified" datetime="2021-08-31T11:20:49+08:00">2021-08-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/msfmydream/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>可分为三个区： 工作区，暂存区，远程仓库</p>
-<p>1.在本地进行初始化，建立暂存区，  .git 文件存储当前项目的所有版本信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<p> 2.将文件从工作区提交到暂存区</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add  文件名</span><br><span class="line">git add *  提交所有文件</span><br><span class="line"></span><br><span class="line">git commit -m &quot;这一次提交的描述&quot;</span><br></pre></td></tr></table></figure>
-
-<p>3.查看当前工作区的状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/msfmydream/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/msfmydream/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/msfmydream/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Azu"
-      src="/msfmydream/images/512.gif">
-  <p class="site-author-name" itemprop="name">Azu</p>
-  <div class="site-description" itemprop="description">轻音厨</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/msfmydream/archives/">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <span class="site-state-item-count">15</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/msfmydream/categories/">
-          
-        <span class="site-state-item-count">6</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/msfmydream/tags/">
-          
-        <span class="site-state-item-count">18</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/yongtai.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/msfmydream/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/msfmydream/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/msfmydream/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/msfmydream/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/109513.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/msfmydream/">Azu  Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/msfmydream/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Azu  Blog</h1><div id="site_social_icons"><a class="social-icon" href="mailto:msfmydream@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/msfmydream/2021/09/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F---%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" title="设计模式---策略模式"><img class="post_bg" src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="设计模式---策略模式"></a></div><div class="recent-post-info"><a class="article-title" href="/msfmydream/2021/09/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F---%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" title="设计模式---策略模式">设计模式---策略模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-11T09:50:54.679Z" title="发表于 2021-09-11 17:50:54">2021-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/msfmydream/categories/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">Java设计模式</a></span></div><div class="content">设计模式—策略模式
+销售类Sale​                销售项SaleItem: 商品名、价格、数量​计算商品价格有多种算法，​                    1.平时不打折​                    2.优惠活动时：满200减50​                    3.打九折…等等
+
+要求使用的各种计价算法可以轻松的互换，所以将计价这个行为抽象出来作为一个接口，再创建不同的实现类实现该接口，实现不同的计价规则。
+
+
+例如：
+计价接口类
+123public interface CalPrice &#123;    double cal(double saleItemPrice);&#125;
+
+普通计价类
+123456public class NormalPrice implements CalPrice &#123;    @Override    public double cal(double saleItemPrice) &#123;        return saleItemPrice;    &#125;&#125;
+
+活动打九折
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/msfmydream/2021/09/09/%5B%E7%AC%94%E8%AE%B0%5D%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/" title="[笔记]图中求最短路的方法"><img class="post_bg" src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="[笔记]图中求最短路的方法"></a></div><div class="recent-post-info"><a class="article-title" href="/msfmydream/2021/09/09/%5B%E7%AC%94%E8%AE%B0%5D%E5%9B%BE%E4%B8%AD%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%9A%84%E6%96%B9%E6%B3%95/" title="[笔记]图中求最短路的方法">[笔记]图中求最短路的方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-09T09:51:51.443Z" title="发表于 2021-09-09 17:51:51">2021-09-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span></div><div class="content">
+求最短路：
+​    ①Dijkstra算法
+​    ②Dijkstra算法的堆优化版本
+​    ③spfa求最短路
+​    ④spfa判断图中是否存在负环
 
 
 
-      </div>
+Dijkstra求最短路给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环，所有边权均为正值。
+请你求出 1 号点到 n 号点的最短距离，如果无法从 1 号点走到 n 号点，则输出 −1。
+ 输入格式
+第一行包含整数 n 和 m。
+接下来 m 行每行包含三个整数 x,y,z表示存在一条从点 x 到点 y 的有向边，边长为 z。
+  输出格式
+输出一个整数，表示 11 号点到 n 号点的最短距离。
+如果路径不存在，则输出 −1。
+ 数据范围
+1≤n≤5001≤m≤105图中涉及边长均不超过10000。
+  输入样例：
+12343 31 2 22 3 11 3 4
 
- 
-           <div>
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="210" height="110" src="//music.163.com/outchain/player?type=0&id=6948177186&auto=0&height=90"></iframe>
-           </div>
-  
+  输出样例：
+13
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253#include &lt;ios ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/msfmydream/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/" title="c++中优先队列(priority_queue)的用法"><img class="post_bg" src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="c++中优先队列(priority_queue)的用法"></a></div><div class="recent-post-info"><a class="article-title" href="/msfmydream/2021/09/09/c++%E4%B8%AD%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97(priority_queue)%E7%9A%84%E7%94%A8%E6%B3%95/" title="c++中优先队列(priority_queue)的用法">c++中优先队列(priority_queue)的用法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-09T03:47:27.134Z" title="发表于 2021-09-09 11:47:27">2021-09-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/msfmydream/categories/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/">语法基础</a></span></div><div class="content">优先队列定义定义：priority_queue&lt;Type, Container Functional&gt;
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Azu</span>
-</div>
-
-        
+Type 表示队列中的数据类型
+Container 表示容器的类型，例如vector，queue 等
+Functional 表示比较的方式， 默认是大根堆
 
 
 
+12345//小根堆priority_queue &lt;int , vector&lt;int&gt; , greater&lt;int&gt; heap;//大根堆priority_queue&lt;int , vector&lt;int&gt; , less&lt;int&gt; &gt; heap;
 
 
 
+优先队列的本质是一个堆来实现的
 
+top 访问队头元素
+empty 队列是否为空
+size 返回队列中元素的个数
+push 插入元素到队尾( 根据队列的定义进行排序)
+pop 弹出队头元素
+swap 交换内容
 
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/msfmydream/lib/anime.min.js"></script>
-  <script src="/msfmydream/lib/velocity/velocity.min.js"></script>
-  <script src="/msfmydream/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/msfmydream/js/utils.js"></script>
-
-<script src="/msfmydream/js/motion.js"></script>
-
-
-<script src="/msfmydream/js/schemes/pisces.js"></script>
-
-
-<script src="/msfmydream/js/next-boot.js"></script>
-
-
-
-
-  
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/msfmydream/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" title="[笔记]树与图的遍历"><img class="post_bg" src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="[笔记]树与图的遍历"></a></div><div class="recent-post-info"><a class="article-title" href="/msfmydream/2021/09/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" title="[笔记]树与图的遍历">[笔记]树与图的遍历</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-07T14:26:27.076Z" title="发表于 2021-09-07 22:26:27">2021-09-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span></div><div class="content">树与图的遍历例1：树的重心
+给定一颗树，树中包含 n 个结点（编号1∼n）和 n−1 条无向边。
+请你找到树的重心，并输出将重心删除后，剩余各个连通块中点数的最大值。
+重心定义：重心是指树中的一个结点，如果将这个点删除后，剩余各个连通块中点数的最大值最小，那么这个节点被称为树的重心。
+  输入格式
+第一行包含整数 n，表示树的结点数。
+接下来 n−1 行，每行包含两个整数 a 和 b，表示点 a 和点 b 之间存在一条边。
+  输出格式
+输出一个整数 m，表示将重心删除后，剩余各个连通块中点数的最大值。
+  数据范围
+1≤n≤105
 
 
 
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;algorithm&gt;using namespace std;const int N = 1e5 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/msfmydream/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/" title="[笔记]执着的DFS"><img class="post_bg" src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="[笔记]执着的DFS"></a></div><div class="recent-post-info"><a class="article-title" href="/msfmydream/2021/09/01/%E6%89%A7%E7%9D%80%E7%9A%84DFS/" title="[笔记]执着的DFS">[笔记]执着的DFS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T15:45:40.000Z" title="发表于 2021-09-01 23:45:40">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a></span></div><div class="content">DFS–深度优先搜索例题一： 全排列问题，输入一个数n，输出它的所有排列可能123456789101112131415161718dfs(int u)&#123;    if(u == n)    &#123;        for(int i = 0; i &lt; n; i++)  printf(&quot;%d &quot;,path[i]);    &#125;        for(int i = 1; i &lt;= n; i++)    &#123;        if( !used[i] )        &#123;            path[u] = i;            used[i] = true;            dfs(u + 1);            used[i] = false;        &#125;    &#125;&#125;
 
 
 
+例题二：n-皇后问题n−皇后问题是指将 n个皇后放在 n×n 的国际象棋棋盘上，使得皇后不能相互攻击到，即任意两个皇后都不能处于同一行、同一列或同一斜线上。
+现在给定整数 n，请你输出所有 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/msfmydream/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" title="git够用手册"><img class="post_bg" src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="git够用手册"></a></div><div class="recent-post-info"><a class="article-title" href="/msfmydream/2021/08/30/git%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" title="git够用手册">git够用手册</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T05:47:40.000Z" title="发表于 2021-08-30 13:47:40">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/msfmydream/categories/%E6%9D%82%E8%B0%88/">杂谈</a></span></div><div class="content">可分为三个区： 工作区，暂存区，远程仓库
+1.在本地进行初始化，建立暂存区，  .git 文件存储当前项目的所有版本信息
+1git init
+
+ 2.将文件从工作区提交到暂存区
+1234git add  文件名git add *  提交所有文件git commit -m &quot;这一次提交的描述&quot;
+
+3.查看当前工作区的状态
+1git status
 
 
 
+4.从暂存区恢复文件到工作区
+1git checkout 文件名
 
+5.查看工作区和暂存区版本的区别
+1git diff
 
+6.查看提交过的历史版本
+1git log
 
+7.恢复文件到指定的版本
+1git reset --hard 版本号   恢复到指定版本
 
+8.若要从本地提交到远程仓库，需要先生成ssh密匙
+1ssh-keygen -t rsa -C &quot;你的github邮箱&quot;
 
-
-  
-
-  
-
-</body>
-</html>
+从本地生成密匙后，到  我的电脑=&gt; 用户 =&gt;用户文件夹 =&gt; .ssh（隐藏文件） =&gt; id_rsa.pub（存有密匙）
+拿到这个文件中的密匙后，进入github登录用户，进入 setting ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/msfmydream/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/msfmydream/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/yongtai.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Azu</div><div class="author-info__description">菜菜历险记</div></div><div class="card-info-data site-data is-center"><a href="/msfmydream/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/msfmydream/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/msfmydream/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="https://github.com/msfmydream"><i class="fab fa-github"></i><span>啥都没有的GitHub喔</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:msfmydream@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">我饿了，果然诚实可靠幽默风趣温柔善良正义可爱不能当饭吃。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2022/11/02/840%E8%80%83%E8%AF%95%E7%AC%94%E8%AE%B0/" title="840笔记"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="840笔记"/></a><div class="content"><a class="title" href="/msfmydream/2022/11/02/840%E8%80%83%E8%AF%95%E7%AC%94%E8%AE%B0/" title="840笔记">840笔记</a><time datetime="2022-11-02T04:32:56.901Z" title="发表于 2022-11-02 12:32:56">2022-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2022/01/10/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" title="记一次服务器环境搭建过程"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="记一次服务器环境搭建过程"/></a><div class="content"><a class="title" href="/msfmydream/2022/01/10/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" title="记一次服务器环境搭建过程">记一次服务器环境搭建过程</a><time datetime="2022-01-10T12:53:36.534Z" title="发表于 2022-01-10 20:53:36">2022-01-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2022/01/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/" title="设计模式总结"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="设计模式总结"/></a><div class="content"><a class="title" href="/msfmydream/2022/01/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/" title="设计模式总结">设计模式总结</a><time datetime="2022-01-04T15:34:05.436Z" title="发表于 2022-01-04 23:34:05">2022-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2021/10/10/%E8%A3%85%E9%A5%B0%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="JAVA设计模式-装饰器设计模式"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="JAVA设计模式-装饰器设计模式"/></a><div class="content"><a class="title" href="/msfmydream/2021/10/10/%E8%A3%85%E9%A5%B0%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="JAVA设计模式-装饰器设计模式">JAVA设计模式-装饰器设计模式</a><time datetime="2021-10-10T02:51:09.213Z" title="发表于 2021-10-10 10:51:09">2021-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2021/09/23/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="[笔记]动态规划-背包"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="[笔记]动态规划-背包"/></a><div class="content"><a class="title" href="/msfmydream/2021/09/23/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="[笔记]动态规划-背包">[笔记]动态规划-背包</a><time datetime="2021-09-23T02:57:39.588Z" title="发表于 2021-09-23 10:57:39">2021-09-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span class="card-category-list-name">Java设计模式</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">服务器相关</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E6%9D%82%E8%B0%88/"><span class="card-category-list-name">杂谈</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">算法笔记</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E8%80%83%E7%A0%94%E4%B8%93%E4%B8%9A%E8%AF%BE/"><span class="card-category-list-name">考研专业课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span class="card-category-list-name">设计模式</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">语法基础</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/msfmydream/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/msfmydream/tags/DFS/" style="font-size: 1.5em; color: #99a9bf">DFS</a> <a href="/msfmydream/tags/Prim%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">Prim算法</a> <a href="/msfmydream/tags/c/" style="font-size: 1.1em; color: #999">c++</a> <a href="/msfmydream/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/msfmydream/tags/ubuntu/" style="font-size: 1.1em; color: #999">ubuntu</a> <a href="/msfmydream/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" style="font-size: 1.1em; color: #999">二分图</a> <a href="/msfmydream/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.1em; color: #999">动态规划</a> <a href="/msfmydream/tags/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">匈牙利算法</a> <a href="/msfmydream/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 1.1em; color: #999">图论</a> <a href="/msfmydream/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 1.1em; color: #999">排序</a> <a href="/msfmydream/tags/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/" style="font-size: 1.1em; color: #999">数学知识</a> <a href="/msfmydream/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 1.1em; color: #999">最小生成树</a> <a href="/msfmydream/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">最短路算法</a> <a href="/msfmydream/tags/%E6%9F%93%E8%89%B2%E6%B3%95/" style="font-size: 1.1em; color: #999">染色法</a> <a href="/msfmydream/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 1.1em; color: #999">环境配置</a> <a href="/msfmydream/tags/%E8%80%83%E7%A0%94/" style="font-size: 1.1em; color: #999">考研</a> <a href="/msfmydream/tags/%E8%A3%85%E9%A5%B0%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.1em; color: #999">装饰器设计模式</a> <a href="/msfmydream/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.5em; color: #99a9bf">设计模式</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Azu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/msfmydream/js/utils.js"></script><script src="/msfmydream/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
