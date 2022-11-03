@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>笔试题总结 | Azu  Blog</title><meta name="author" content="Azu"><meta name="copyright" content="Azu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据库模式 数据库系统的三级模式结构是指数据库系统是由模式、外模式和内模式三级构成的。  （1）模式 模式也称逻辑模式或概念模式，是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。 模式实际上是数据库数据在逻辑级上的视图。一个数据库只有一个模式。定义模式时不仅要定义数据的逻辑结构，而且要定义数据之间的联系，定义与数据有关的安全性、完整性要求。  （2）外模式 外模式也称用户模式，">
+<meta property="og:type" content="website">
+<meta property="og:title" content="笔试题总结">
+<meta property="og:url" content="https://github.com/msfmydream/%E8%8D%89%E7%A8%BF/%E7%AC%94%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93.html">
+<meta property="og:site_name" content="Azu  Blog">
+<meta property="og:description" content="数据库模式 数据库系统的三级模式结构是指数据库系统是由模式、外模式和内模式三级构成的。  （1）模式 模式也称逻辑模式或概念模式，是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。 模式实际上是数据库数据在逻辑级上的视图。一个数据库只有一个模式。定义模式时不仅要定义数据的逻辑结构，而且要定义数据之间的联系，定义与数据有关的安全性、完整性要求。  （2）外模式 外模式也称用户模式，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/bg17.jpg">
+<meta property="article:published_time" content="2022-11-03T15:50:07.777Z">
+<meta property="article:modified_time" content="2022-11-03T15:50:07.777Z">
+<meta property="article:author" content="Azu">
+<meta property="article:tag" content="头发的离去，是风的追求？还是头皮的不挽留？">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/bg17.jpg"><link rel="shortcut icon" href="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/favicon.jpg"><link rel="canonical" href="https://github.com/msfmydream/%E8%8D%89%E7%A8%BF/%E7%AC%94%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/msfmydream/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/msfmydream/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '笔试题总结',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-11-03 23:50:07'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/yongtai.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/msfmydream/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/msfmydream/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/msfmydream/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/msfmydream/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/msfmydream/">Azu  Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/msfmydream/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/msfmydream/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">笔试题总结</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><h5 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h5><blockquote>
+<p>数据库系统的三级模式结构是指数据库系统是由模式、外模式和内模式三级构成的。 </p>
+<p>（1）模式 模式也称逻辑模式或概念模式，是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。 模式实际上是数据库数据在逻辑级上的视图。一个数据库只有一个模式。定义模式时不仅要定义数据的逻辑结构，而且要定义数据之间的联系，定义与数据有关的安全性、完整性要求。 </p>
+<p>（2）外模式 外模式也称用户模式，它是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。 外模式通常是模式的子集。一个数据库可以有多个外模式。应用程序都是和外模式打交道的。外模式是保证数据库安全性的一个有力措施。每个用户只能看见和访问所对应的外模式中的数据，数据库中的其余数据对他们是不可见的。 </p>
+<p>（3）内模式 内模式也称存储模式，一个数据库只有一个内模式。它是数据物理结构和存储方式的描述，是数据在数据库内部的表示方式。例如，记录的存储方式是顺序结构存储还是B树结构存储；索引按什么方式组织；数据是否压缩，是否加密；数据的存储记录结构有何规定等。</p>
+</blockquote>
+<h5 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h5><blockquote>
+<p>NF的意思是范式。<br>粗略而言数据库分为三个范式。即：第一范式  第二范式  第三范式。<br>第一范式的意思是：数据表中的字段都是不可分割的，原子的。第一范式是最简单的，也是必需的。我想你应该明白。<br>第二范式：在第一范式的基础上，数据表中各字段和主键之间不存在部分依赖。例如：数据表中存在字段&lt;学号，姓名，分数&gt;组成，其中&lt;学号，姓名&gt;组合在一起构成主键。如果学生的姓名不重复的情况下，那么就存在部分依赖。<br>第三范式：第二范式的基础上，不存在传递依赖。<br>所谓传递依赖是指：例如：数据表中存在字段&lt;学号，姓名，分数&gt;组成，其中&lt;学号&gt;是主键。如果学生的姓名不重复的情况下，那么就存在传递依赖。即：学号可以唯一确定姓名，而姓名有是不重复的，所以，姓名也可以唯一确定分数。那么，学号决定分数就不唯一了，中间还有姓名可以确定。这就是所谓的传递依赖。</p>
+</blockquote>
+<h3 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h3><h5 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h5><p><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/6551980_1485520443700_7AE78B464525BF848283AE80148A1DD3.png" alt="img"></p>
+<blockquote>
+<p>TCP连接建立(“三次握手”)</p>
+<p>分为三步：</p>
+<p>（1）客户机的TCP向服务器的TCP发送一个连接请求报文段，其中不含应用层数据，首部中的SYN标志位被置为1。客户机会随机选择一个起始序号seq=x(连接请求报文不携带数据，但要消耗一个序号)。(SYN = 1, seq = x)</p>
+<p>（2）服务器的TCP收到连接请求报文段后，如同意建立连接，就向客户机发回确认，并为该TCP连接分配TCP缓存和变量。确认报文段中SYN和ACK位都被置为1，确认号字段的值为x+1，并且服务器随机产生起始序号seq = y(确认报文不携带数据，但也要消耗掉一个序号)。确认报文段同样不包含应用层数据。(SYN = 1, ACK = 1, seq = y, ack = x+1)</p>
+<p>（3）当客户机收到确认报文段后，还要向服务器给出确认，并且也要分配缓存和变量。报文段的ACK标志位被置1，序号字段为x+1，确认号字段为ack = y+1。该报文段可以携带数据，如果不携带数据则不消耗序号。(ACK = 1, seq = x+1, ack = y+1)</p>
+<p>  在成功完成以上三步之后，TCP连接就建立了，接下来就可以传送应用层数据了。TCP提供的是全双工通信，因此通信双方的应用进程在任何时候都能发送数据。</p>
+<p>  另外，服务器端的资源是在完成第二次握手时分配的，而客户端的资源是在完成第三次握手时分配的。这使得服务器易于受到SYN洪泛攻击</p>
+<p>TCP连接的释放(“四次挥手”)</p>
+<p>分为四步：</p>
+<p>（1）客户机打算关闭连接，就向其TCP发送一个连接释放报文段，并停止再发送数据，主动关闭TCP连接，该报文段的FIN标志位被置1，seq = u，它等于前面已传送过的数据的最后一个字节的序号加1(FIN报文段即使不携带数据，也要消耗掉一个序号)。TCP是全双工的，可以想象成是一条TCP连接上有两条数据通路。当发送FIN报文时，发送FIN的一端就不能再发送数据，也就是关闭了其中一条数据通路，但对方还可以发送数据。(FIN = 1, seq = u)</p>
+<p>（2）服务器收到连接释放报文段后即发出确认，确认号是ack = u+1，而这个报文段自己的序号是v，等于它前面已传送过的数据的最后一个字节的序号加1。此时，从客户机到服务器方向的连接就释放了，TCP连接处于半关闭状态。但服务器若发送数据，客户机任要接收，即从服务器到客户机方向的连接没有关闭。(ACK = 1, seq = v, ack = u+1)</p>
+<p>（3）若服务器已经没有要向客户机发送的数据，就通知TCP释放连接，此时其发出FIN = 1的连接释放报文段。(FIN = 1, ACK = 1, seq = w, ack = u+1)</p>
+<p>（4）客户机收到连接释放报文段后，必须发出确认。在确认报文段中，ACK字段被置为1，确认号ack = w+1，序号seq = u+1。此时TCP连接还没有释放掉，必须经过时间等待计时器设置的时间2MSL后，客户机才进入到连接关闭状态。(ACK = 1, seq = u+1, ack = w+1)</p>
+<p>因此，服务器端结束TCP连接的时间要比客户端早一些。</p>
+</blockquote>
+<h5 id="路由协议"><a href="#路由协议" class="headerlink" title="路由协议"></a>路由协议</h5><blockquote>
+<p>BGP(边界网关协议)是一个域间路由协议。RIP和OSPF是域内路由协议。ARP不是路由协议。</p>
+</blockquote>
+<h5 id="地址分类"><a href="#地址分类" class="headerlink" title="地址分类"></a>地址分类</h5><blockquote>
+<p>A类：</p>
+<p>  1.0.0.1-126.255.255.254</p>
+<p>​    127.0.0.1是测试用地址</p>
+<p>B类：</p>
+<p>  128.0.0.1-191.255.255.254</p>
+<p>​    172.16.0.0-172.31.255.255是私有地址</p>
+<p>​    162.254.X.X是保留地址</p>
+<p>C类：</p>
+<p>  192.0.0.1-223.255.255.254</p>
+<p>​    192.168.X.X私有地址</p>
+<p>D类：</p>
+<p>  224.0.0.1-239.255.255.254</p>
+<p>E类：</p>
+<p>就不细说了！</p>
+<p>再说说为什么都到254！</p>
+<p>是因为X.255.255.255是当前网络的广播地址，不用做设备地址使用，所以都到254。</p>
+<p>X.0.0.0是当前网络地址，也不分配给设备使用！</p>
+</blockquote>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><h5 id="抖动-系统发生抖动"><a href="#抖动-系统发生抖动" class="headerlink" title="抖动-系统发生抖动"></a>抖动-系统发生抖动</h5><blockquote>
+<p>1、抖动是什么？</p>
+<p>如果分配给进程的存储块数量小于进程所需要的最小值，进程的运行将很频繁地产生缺页中断，这种频率非常高的页面置换现象称为抖动。</p>
+<p>2、系统抖动：是指刚被调出的页又立即被调入所形成的频繁调入调出的现象。</p>
+<p>3、原因：置换算法选择不当</p>
+<p>4、解决办法：优化置换算法；减少进程数；增大内存</p>
+</blockquote>
+<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><h5 id="SpringAop"><a href="#SpringAop" class="headerlink" title="SpringAop"></a>SpringAop</h5><blockquote>
+<p>aop的五类通知： 前置通知[Before advice]：在连接点前面执行，前置通知不会影响连接点的执行，除非此处抛出异常。 正常返回通知[After returning advice]：在连接点正常执行完成后执行，如果连接点抛出异常，则不会执行。 异常返回通知[After throwing advice]：在连接点抛出异常后执行。 返回通知[After (finally) advice]：在连接点执行完成后执行，不管是正常执行完成，还是抛出异常，都会执行返回通知中的内容。 环绕通知[Around advice]：环绕通知围绕在连接点前后，比如一个方法调用的前后。这是最强大的通知类型，能在方法调用前后自定义一些操作。环绕通知还需要负责决定是继续处理join point(调用ProceedingJoinPoint的proceed方法)还是中断执行。</p>
+</blockquote>
+<h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><h5 id="JVM参数说明"><a href="#JVM参数说明" class="headerlink" title="JVM参数说明"></a>JVM参数说明</h5><blockquote>
+<p>Xms 起始内存</p>
+<p>Xmx 最大内存</p>
+<p>Xmn 新生代内存</p>
+<p>Xss 栈大小。 就是创建线程后，分配给每一个线程的内存大小</p>
+<p>-XX:NewRatio=n:设置年轻代和年老代的比值。如:为3，表示年轻代与年老代比值为1：3，年轻代占整个年轻代年老代和的1/4</p>
+<p>-XX:SurvivorRatio=n:年轻代中Eden区与两个Survivor区的比值。注意Survivor区有两个。如：3，表示Eden：Survivor=3：2，一个Survivor区占整个年轻代的1/5</p>
+<p>-XX:MaxPermSize=n:设置持久代大小</p>
+<p>收集器设置<br>-XX:+UseSerialGC:设置串行收集器<br>-XX:+UseParallelGC:设置并行收集器<br>-XX:+UseParalledlOldGC:设置并行年老代收集器<br>-XX:+UseConcMarkSweepGC:设置并发收集器<br>垃圾回收统计信息<br>-XX:+PrintGC<br>-XX:+PrintGCDetails<br>-XX:+PrintGCTimeStamps<br>-Xloggc:filename<br>并行收集器设置<br>-XX:ParallelGCThreads=n:设置并行收集器收集时使用的CPU数。并行收集线程数。<br>-XX:MaxGCPauseMillis=n:设置并行收集最大暂停时间<br>-XX:GCTimeRatio=n:设置垃圾回收时间占程序运行时间的百分比。公式为1/(1+n)<br>并发收集器设置<br>-XX:+CMSIncrementalMode:设置为增量模式。适用于单CPU情况。<br>-XX:ParallelGCThreads=n:设置并发收集器年轻代收集方式为并行收集时，使用的CPU数。并行收集线程数。</p>
+</blockquote>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/yongtai.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Azu</div><div class="author-info__description">菜菜历险记</div></div><div class="card-info-data site-data is-center"><a href="/msfmydream/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/msfmydream/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/msfmydream/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" href="https://github.com/msfmydream"><i class="fab fa-github"></i><span>啥都没有的GitHub喔</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:msfmydream@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">我饿了，果然诚实可靠幽默风趣温柔善良正义可爱不能当饭吃。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2022/11/02/840%E8%80%83%E8%AF%95%E7%AC%94%E8%AE%B0/" title="840笔记"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="840笔记"/></a><div class="content"><a class="title" href="/msfmydream/2022/11/02/840%E8%80%83%E8%AF%95%E7%AC%94%E8%AE%B0/" title="840笔记">840笔记</a><time datetime="2022-11-02T04:32:56.901Z" title="发表于 2022-11-02 12:32:56">2022-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2022/01/10/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" title="记一次服务器环境搭建过程"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="记一次服务器环境搭建过程"/></a><div class="content"><a class="title" href="/msfmydream/2022/01/10/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" title="记一次服务器环境搭建过程">记一次服务器环境搭建过程</a><time datetime="2022-01-10T12:53:36.534Z" title="发表于 2022-01-10 20:53:36">2022-01-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2022/01/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/" title="设计模式总结"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="设计模式总结"/></a><div class="content"><a class="title" href="/msfmydream/2022/01/04/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/" title="设计模式总结">设计模式总结</a><time datetime="2022-01-04T15:34:05.436Z" title="发表于 2022-01-04 23:34:05">2022-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2021/10/10/%E8%A3%85%E9%A5%B0%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="JAVA设计模式-装饰器设计模式"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="JAVA设计模式-装饰器设计模式"/></a><div class="content"><a class="title" href="/msfmydream/2021/10/10/%E8%A3%85%E9%A5%B0%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="JAVA设计模式-装饰器设计模式">JAVA设计模式-装饰器设计模式</a><time datetime="2021-10-10T02:51:09.213Z" title="发表于 2021-10-10 10:51:09">2021-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/msfmydream/2021/09/23/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="[笔记]动态规划-背包"><img src="https://msfmydream.oss-cn-hangzhou.aliyuncs.com/content_img/citynight.jpg" onerror="this.onerror=null;this.src='/msfmydream/img/404.jpg'" alt="[笔记]动态规划-背包"/></a><div class="content"><a class="title" href="/msfmydream/2021/09/23/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="[笔记]动态规划-背包">[笔记]动态规划-背包</a><time datetime="2021-09-23T02:57:39.588Z" title="发表于 2021-09-23 10:57:39">2021-09-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span class="card-category-list-name">Java设计模式</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">服务器相关</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E6%9D%82%E8%B0%88/"><span class="card-category-list-name">杂谈</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">算法笔记</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E8%80%83%E7%A0%94%E4%B8%93%E4%B8%9A%E8%AF%BE/"><span class="card-category-list-name">考研专业课</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"><span class="card-category-list-name">设计模式</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/msfmydream/categories/%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">语法基础</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/msfmydream/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/msfmydream/tags/DFS/" style="font-size: 1.5em; color: #99a9bf">DFS</a> <a href="/msfmydream/tags/Prim%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">Prim算法</a> <a href="/msfmydream/tags/c/" style="font-size: 1.1em; color: #999">c++</a> <a href="/msfmydream/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/msfmydream/tags/ubuntu/" style="font-size: 1.1em; color: #999">ubuntu</a> <a href="/msfmydream/tags/%E4%BA%8C%E5%88%86%E5%9B%BE/" style="font-size: 1.1em; color: #999">二分图</a> <a href="/msfmydream/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 1.1em; color: #999">动态规划</a> <a href="/msfmydream/tags/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">匈牙利算法</a> <a href="/msfmydream/tags/%E5%9B%BE%E8%AE%BA/" style="font-size: 1.1em; color: #999">图论</a> <a href="/msfmydream/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 1.1em; color: #999">排序</a> <a href="/msfmydream/tags/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/" style="font-size: 1.1em; color: #999">数学知识</a> <a href="/msfmydream/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 1.1em; color: #999">最小生成树</a> <a href="/msfmydream/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">最短路算法</a> <a href="/msfmydream/tags/%E6%9F%93%E8%89%B2%E6%B3%95/" style="font-size: 1.1em; color: #999">染色法</a> <a href="/msfmydream/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 1.1em; color: #999">环境配置</a> <a href="/msfmydream/tags/%E8%80%83%E7%A0%94/" style="font-size: 1.1em; color: #999">考研</a> <a href="/msfmydream/tags/%E8%A3%85%E9%A5%B0%E5%99%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.1em; color: #999">装饰器设计模式</a> <a href="/msfmydream/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.5em; color: #99a9bf">设计模式</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">11</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/msfmydream/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Azu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/msfmydream/js/utils.js"></script><script src="/msfmydream/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
